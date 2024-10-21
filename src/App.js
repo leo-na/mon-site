@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HommePage from "./HommePage"; // Correction du chemin d'import
+import HomePage from "./HomePage";
+import Baniere from "./components/Baniere";
+import ImageScroller from "./components/ImageScroller";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        {/* Le Router doit englober tous les composants liés à la navigation */}
+
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/homme" element={<HommePage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

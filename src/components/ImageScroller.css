@@ -1,0 +1,41 @@
+.image-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.image-link:hover .scroller-image {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+.image-scroller-container {
+  padding: 20px;
+}
+
+.scroller-title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.image-scroller {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.image-link {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.scroller-image {
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.image-link:hover .scroller-image {
+  transform: scale(1.05);
+}
